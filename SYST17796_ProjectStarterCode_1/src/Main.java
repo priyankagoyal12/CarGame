@@ -13,7 +13,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Enter your username: ");
+        System.out.print("Register with game using the username: ");
         String username = scanner.nextLine();
 
         HillClimbingGame game = new HillClimbingGame(username);
@@ -22,5 +22,18 @@ public class Main {
         System.out.println("Welcome, " + user.getUsername() + "! Let's start the game.");
 
         // Game logic and user interactions
+
+        // Simulating game completion and updating user's score
+        game.communicateResult(true);
+        user.increaseScore(100);
+
+        // Displaying updated user information
+        System.out.println("Username: " + user.getUsername());
+        System.out.println("Score: " + user.getScore());
+
+        // Level up
+        game.increaseLevel();
+        int level = game.getLevel();
+        System.out.println("Level: " + level);
     }
 }

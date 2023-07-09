@@ -10,10 +10,12 @@
 public class User {
     private String username;
     private int score;
+    private boolean hasWon;
 
     public User(String username) {
         this.username = username;
         this.score = 0;
+        this.hasWon = false;
     }
 
     public String getUsername() {
@@ -26,5 +28,13 @@ public class User {
 
     public void increaseScore(int points) {
         score += points;
+    }
+
+    public boolean hasWon() {
+        return hasWon;
+    }
+
+    public void setHasWon(boolean hasWon) {
+        this.hasWon = hasWon;
     }
 }

@@ -12,12 +12,16 @@
 public class HillClimbingGame {
     private User user;
     private int level;
-    // Additional game-related variables and methods
 
     public HillClimbingGame(String username) {
         this.user = new User(username);
         this.level = 1;
-        // Initialize other game-related variables
+    }
+
+    public void communicateResult(boolean hasWon) {
+        if (user != null) {
+            user.setHasWon(hasWon);
+        }
     }
 
     public User getUser() {
