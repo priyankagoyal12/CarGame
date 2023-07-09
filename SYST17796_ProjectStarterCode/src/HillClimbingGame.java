@@ -41,3 +41,5 @@ public class HillClimbingGame {
 
     // Other game-related methods, such as starting a new game, updating game progress, etc.
 }
+
+//this is priyanka goyal who has added the change
